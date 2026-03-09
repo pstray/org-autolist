@@ -135,7 +135,7 @@ automatically insert new list items.
             (<= (point) (org-autolist-beginning-of-item-after-bullet)))
         (condition-case nil
           (call-interactively 'org-outdent-item)
-          ('error (delete-region (line-beginning-position)
+          (error (delete-region (line-beginning-position)
                     (line-end-position))))
 
         ;; Now we can insert a new list item. The logic here is a little tricky
